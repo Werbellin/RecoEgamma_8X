@@ -30,12 +30,12 @@ mvaTag = "V1"
 #   5   EE             pt 10-inf GeV
 
 mvaSpring16WeightFiles_V1 = cms.vstring(
-    "RecoEgamma/ElectronIdentification/data/Spring16/EIDmva_EB1_5_oldNT_PROPER_Spring16_DY_v1_BDT.weights.xml",
-    "RecoEgamma/ElectronIdentification/data/Spring16/EIDmva_EB2_5_oldNT_PROPER_Spring16_DY_v1_BDT.weights.xml",
-    "RecoEgamma/ElectronIdentification/data/Spring16/EIDmva_EE_5_oldNT_PROPER_Spring16_DY_v1_BDT.weights.xml",
-    "RecoEgamma/ElectronIdentification/data/Spring16/EIDmva_EB1_10_oldNT_PROPER_Spring16_DY_v1_BDT.weights.xml",
-    "RecoEgamma/ElectronIdentification/data/Spring16/EIDmva_EB2_10_oldNT_PROPER_Spring16_DY_v1_BDT.weights.xml",
-    "RecoEgamma/ElectronIdentification/data/Spring16/EIDmva_EE_10_oldNT_PROPER_Spring16_DY_v1_BDT.weights.xml"
+    "RecoEgamma/ElectronIdentification/data/Spring16/electronID_mva_Spring16_EB1_5_V1.weights.xml",
+    "RecoEgamma/ElectronIdentification/data/Spring16/electronID_mva_Spring16_EB2_5_V1.weights.xml",
+    "RecoEgamma/ElectronIdentification/data/Spring16/electronID_mva_Spring16_EE_5_V1.weights.xml",
+    "RecoEgamma/ElectronIdentification/data/Spring16/electronID_mva_Spring16_EB1_10_V1.weights.xml",
+    "RecoEgamma/ElectronIdentification/data/Spring16/electronID_mva_Spring16_EB2_10_V1.weights.xml",
+    "RecoEgamma/ElectronIdentification/data/Spring16/electronID_mva_Spring16_EE_10_V1.weights.xml"
     )
 
 # Load some common definitions for MVA machinery
@@ -51,7 +51,7 @@ mvaCategoriesMapName   = mvaProducerModuleLabel + ":" + mvaSpring16ClassName + m
 
 # The working point for this MVA that is expected to have about 90% signal
 # efficiency in each category
-idName90 = "mvaEleID-Spring16-25ns-V1-wp0"
+idName90 = "mvaEleID-Spring16-V1-wp90"
 MVA_WP90 = EleMVA_6Categories_WP(
     idName = idName90,
     mvaValueMapName = mvaValueMapName,           # map with MVA values for all particles
@@ -83,12 +83,12 @@ MVA_WPLoose = EleMVA_6Categories_WP(
     idName = idNameLoose,
     mvaValueMapName = mvaValueMapName,           # map with MVA values for all particles
     mvaCategoriesMapName = mvaCategoriesMapName, # map with category index for all particles
-    cutCategory0 =  -0.265, # EB1 low pt
-    cutCategory1 =  -0.556, # EB2 low pt
-    cutCategory2 =  -0.551, # EE low pt
-    cutCategory3 =  -0.072, # EB1
-    cutCategory4 =  -0.286, # EB2
-    cutCategory5 =  -0.267  # EE
+    cutCategory0 =  -0.211, # EB1 low pt
+    cutCategory1 =  -0.396, # EB2 low pt
+    cutCategory2 =  -0.215, # EE low pt
+    cutCategory3 =  -0.870, # EB1
+    cutCategory4 =  -0.838, # EB2
+    cutCategory5 =  -0.763  # EE
     )
 
 
